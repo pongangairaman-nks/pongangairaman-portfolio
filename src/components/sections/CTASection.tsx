@@ -1,12 +1,12 @@
 function HandshakeIcon() {
   return (
-    <div className="w-16 h-16 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center mb-6">
+    <div className="w-20 h-20 rounded-full bg-white border border-neutral-200 flex items-center justify-center mb-8">
       <svg
-        width="34"
-        height="34"
+        width="40"
+        height="40"
         viewBox="0 0 34 34"
         fill="none"
-        stroke="#555"
+        stroke="#777"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -22,44 +22,42 @@ function HandshakeIcon() {
 
 export default function CTASection() {
   return (
-    <section className="bg-white border-b border-neutral-100">
-      <div className="max-w-4xl mx-auto px-8 py-20 flex flex-col items-center text-center">
-        <HandshakeIcon />
+    <section className="min-h-screen flex flex-col items-center justify-center text-center px-12 py-24">
+      <HandshakeIcon />
 
-        <h2 className="text-5xl font-black leading-[1.15] tracking-tight mb-10">
-          Let&apos;s build something{" "}
-          <span className="text-neutral-400 italic">that matters</span>
-        </h2>
+      <h2 className="text-7xl font-black leading-[1.1] tracking-tight mb-12">
+        Let&apos;s build something{" "}
+        <span className="text-neutral-400 italic">that matters</span>
+      </h2>
 
-        <div className="flex items-center gap-3">
-          <a
-            href="mailto:pongangairamannks@gmail.com"
-            className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-neutral-800 transition-colors"
+      <div className="flex items-center gap-4">
+        <a
+          href="mailto:pongangairamannks@gmail.com"
+          className="inline-flex items-center gap-2 bg-neutral-900 text-white px-8 py-4 rounded-full font-medium text-base hover:bg-neutral-800 transition-colors"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 14 14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="1" y="3" width="12" height="8" rx="1" />
-              <path d="M1 4.5 L7 8.5 L13 4.5" />
-            </svg>
-            Email Me
-          </a>
-          <a
-            href="https://www.linkedin.com/in/pongangairaman-nks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-neutral-900 px-6 py-3 rounded-full font-medium text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors"
-          >
-            LinkedIn
-          </a>
-        </div>
+            <rect x="1" y="3" width="12" height="8" rx="1" />
+            <path d="M1 4.5 L7 8.5 L13 4.5" />
+          </svg>
+          Email Me
+        </a>
+        <a
+          href="https://www.linkedin.com/in/pongangairaman-nks"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-neutral-700 px-8 py-4 rounded-full font-medium text-base border border-neutral-400 hover:bg-neutral-300 transition-colors"
+        >
+          LinkedIn
+        </a>
       </div>
     </section>
   );

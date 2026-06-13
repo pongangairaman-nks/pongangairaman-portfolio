@@ -100,50 +100,50 @@ const experiences: Experience[] = [
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-[#f7f7f7] border-b border-neutral-100">
-      <div className="max-w-4xl mx-auto px-8 py-16">
-        <div className="flex items-center gap-4 mb-10">
-          <div className="flex-1 h-px bg-neutral-200" />
-          <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full bg-white">
+    <section className="px-12 py-24">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center gap-4 mb-14">
+          <div className="flex-1 h-px bg-neutral-400" />
+          <div className="px-4 py-1.5 text-xs text-neutral-600 border border-neutral-400 rounded-full bg-[#e8e8e8]">
             Experience
           </div>
-          <div className="flex-1 h-px bg-neutral-200" />
+          <div className="flex-1 h-px bg-neutral-400" />
         </div>
 
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-14">
           {experiences.map((exp) => (
-            <div key={exp.company} className="relative pl-6 border-l-2 border-neutral-200">
-              <div className="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-neutral-900" />
+            <div key={exp.company} className="relative pl-7 border-l-2 border-neutral-300">
+              <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-[#e8e8e8]" />
 
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
+              <div className="flex items-start justify-between mb-5">
+                <div className="flex items-center gap-4">
                   {/* Company logo placeholder — replace with <img> when available */}
-                  <div className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-[10px] font-black text-neutral-600 shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-xs font-black text-neutral-600 shrink-0">
                     {exp.initials}
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-neutral-900">{exp.company}</h3>
-                    <p className="text-xs text-neutral-500">
+                    <h3 className="text-base font-bold text-neutral-900">{exp.company}</h3>
+                    <p className="text-sm text-neutral-500">
                       {exp.role}
                       {exp.location ? ` · ${exp.location}` : ""}
                     </p>
                   </div>
                 </div>
-                <span className="text-xs text-neutral-400 bg-white border border-neutral-200 rounded-full px-3 py-1 whitespace-nowrap ml-4 shrink-0">
+                <span className="text-xs text-neutral-500 bg-white border border-neutral-200 rounded-full px-4 py-1.5 whitespace-nowrap ml-4 shrink-0">
                   {exp.period}
                 </span>
               </div>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-6">
                 {exp.projects.map((proj) => (
                   <div key={proj.name}>
-                    <h4 className="text-[11px] font-semibold text-neutral-900 uppercase tracking-wider mb-2">
+                    <h4 className="text-xs font-semibold text-neutral-600 uppercase tracking-widest mb-2.5">
                       {proj.name}
                     </h4>
-                    <ul className="flex flex-col gap-1.5">
+                    <ul className="flex flex-col gap-2">
                       {proj.bullets.map((b, i) => (
-                        <li key={i} className="text-xs text-neutral-600 leading-relaxed flex gap-2">
-                          <span className="text-neutral-300 mt-0.5 shrink-0">—</span>
+                        <li key={i} className="text-sm text-neutral-600 leading-relaxed flex gap-3">
+                          <span className="text-neutral-400 mt-0.5 shrink-0">—</span>
                           {b}
                         </li>
                       ))}

@@ -9,7 +9,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main>
       <HeroSection />
       <AboutSection />
       <SkillsSection />

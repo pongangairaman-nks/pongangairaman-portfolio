@@ -53,54 +53,54 @@ function ProjectPlaceholder({ name }: { name: string }) {
     .slice(0, 2)
     .join("");
   return (
-    <div className="w-full h-28 rounded-xl bg-[#f7f7f7] border border-neutral-200 mb-4 flex flex-col items-center justify-center gap-2">
-      {/* Replace with <img src="/projects/name.png" className="w-full h-full object-cover rounded-xl" /> */}
-      <div className="w-9 h-9 rounded-lg bg-neutral-200 border border-neutral-300 flex items-center justify-center text-sm font-black text-neutral-500">
+    <div className="w-full h-32 rounded-xl bg-neutral-100 border border-neutral-200 mb-5 flex flex-col items-center justify-center gap-2">
+      {/* Replace with: <img src="/projects/name.png" className="w-full h-full object-cover rounded-xl" /> */}
+      <div className="w-10 h-10 rounded-lg bg-neutral-200 border border-neutral-300 flex items-center justify-center text-sm font-black text-neutral-500">
         {initials}
       </div>
-      <span className="text-[10px] text-neutral-400">Project preview</span>
+      <span className="text-xs text-neutral-400">Project preview</span>
     </div>
   );
 }
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-white border-b border-neutral-100">
-      <div className="max-w-4xl mx-auto px-8 py-16">
-        <div className="flex items-center gap-4 mb-10">
-          <div className="flex-1 h-px bg-neutral-200" />
-          <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full">
+    <section id="projects" className="px-12 py-24">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center gap-4 mb-14">
+          <div className="flex-1 h-px bg-neutral-400" />
+          <div className="px-4 py-1.5 text-xs text-neutral-600 border border-neutral-400 rounded-full bg-[#e8e8e8]">
             Projects
           </div>
-          <div className="flex-1 h-px bg-neutral-200" />
+          <div className="flex-1 h-px bg-neutral-400" />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-5">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="rounded-2xl p-5 flex flex-col bg-[#f7f7f7] border border-neutral-200 hover:border-neutral-400 transition-colors"
+              className="rounded-2xl p-6 flex flex-col bg-white border border-neutral-200 hover:border-neutral-400 transition-colors"
             >
               <ProjectPlaceholder name={project.name} />
 
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <h3 className="text-sm font-bold text-neutral-900">{project.name}</h3>
+              <div className="flex items-start justify-between gap-2 mb-2.5">
+                <h3 className="text-base font-bold text-neutral-900">{project.name}</h3>
                 {project.featured && (
-                  <span className="text-[10px] font-semibold text-neutral-500 bg-white border border-neutral-200 rounded-full px-2 py-0.5 whitespace-nowrap shrink-0">
+                  <span className="text-[10px] font-semibold text-neutral-500 bg-neutral-100 border border-neutral-200 rounded-full px-2.5 py-0.5 whitespace-nowrap shrink-0">
                     Featured
                   </span>
                 )}
               </div>
 
-              <p className="text-xs text-neutral-500 leading-relaxed mb-4">
+              <p className="text-sm text-neutral-500 leading-relaxed mb-5">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-medium text-neutral-500 bg-white border border-neutral-200 rounded-full px-2.5 py-0.5"
+                    className="text-xs font-medium text-neutral-500 bg-neutral-100 border border-neutral-200 rounded-full px-3 py-0.5"
                   >
                     {tag}
                   </span>

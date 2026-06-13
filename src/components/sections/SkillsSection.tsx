@@ -1,7 +1,7 @@
 const skillCategories = [
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="3" width="20" height="13" rx="2" />
         <line x1="7" y1="16" x2="15" y2="16" />
         <line x1="11" y1="16" x2="11" y2="20" />
@@ -12,7 +12,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="9" />
         <path d="M11 2 Q14 8 14 11 Q14 14 11 20" />
         <path d="M11 2 Q8 8 8 11 Q8 14 11 20" />
@@ -24,7 +24,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z" />
         <path d="M2 17l10 5 10-5" />
         <path d="M2 12l10 5 10-5" />
@@ -35,7 +35,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="7" height="7" rx="1.5" />
         <rect x="13" y="2" width="7" height="7" rx="1.5" />
         <rect x="2" y="13" width="7" height="7" rx="1.5" />
@@ -47,7 +47,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 11 L8 7 L12 11 L16 7 L20 11" />
         <path d="M4 11 L4 18 L20 18 L20 11" />
       </svg>
@@ -57,7 +57,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 11l2 2 4-4" />
         <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
       </svg>
@@ -67,7 +67,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="18" height="14" rx="2" />
         <path d="M7 9 L5 11 L7 13" />
         <path d="M15 9 L17 11 L15 13" />
@@ -79,7 +79,7 @@ const skillCategories = [
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="7" y="2" width="8" height="14" rx="2" />
         <circle cx="11" cy="13" r="0.5" fill="currentColor" stroke="none" />
         <line x1="7" y1="16" x2="15" y2="16" />
@@ -93,30 +93,30 @@ const skillCategories = [
 
 export default function SkillsSection() {
   return (
-    <section className="bg-white border-b border-neutral-100">
-      <div className="max-w-4xl mx-auto px-8 py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-[28px] font-bold leading-snug">
+    <section className="px-12 py-24">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold leading-snug tracking-tight">
             Tech I build with
             <br />
             <span className="text-neutral-400 italic">and technologies I love</span>
           </h2>
         </div>
 
-        <div className="flex items-center gap-4 mb-8">
-          <div className="flex-1 h-px bg-neutral-200" />
-          <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex-1 h-px bg-neutral-400" />
+          <div className="px-4 py-1.5 text-xs text-neutral-600 border border-neutral-400 rounded-full bg-[#e8e8e8]">
             Skills
           </div>
-          <div className="flex-1 h-px bg-neutral-200" />
+          <div className="flex-1 h-px bg-neutral-400" />
         </div>
 
         <div className="grid grid-cols-4 gap-4">
           {skillCategories.map((cat) => (
-            <div key={cat.title} className="flex flex-col gap-2 bg-[#f7f7f7] border border-neutral-200 rounded-2xl p-4">
+            <div key={cat.title} className="flex flex-col gap-3 bg-white border border-neutral-200 rounded-2xl p-5">
               <div className="text-neutral-600">{cat.icon}</div>
-              <h3 className="text-xs font-semibold text-neutral-900">{cat.title}</h3>
-              <p className="text-[11px] text-neutral-500 leading-relaxed">{cat.tags}</p>
+              <h3 className="text-sm font-semibold text-neutral-900">{cat.title}</h3>
+              <p className="text-xs text-neutral-500 leading-relaxed">{cat.tags}</p>
             </div>
           ))}
         </div>
