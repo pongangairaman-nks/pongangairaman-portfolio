@@ -38,29 +38,36 @@ export default function HeroSection() {
       </nav>
 
       <div className="flex flex-col items-center text-center px-8 pt-10 pb-20">
+        {/* Profile photo placeholder */}
         <div className="flex items-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-neutral-200 overflow-hidden flex-shrink-0 flex items-end justify-center">
+          <div className="w-16 h-16 rounded-full bg-neutral-100 border-2 border-neutral-200 overflow-hidden flex-shrink-0 flex items-end justify-center">
+            {/* Replace this SVG with <img src="/photo.jpg" ... /> when you have a photo */}
             <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
-              <circle cx="23" cy="17" r="10" fill="#9ca3af" />
-              <path d="M3 46 Q3 31 23 31 Q43 31 43 46" fill="#9ca3af" />
+              <circle cx="23" cy="17" r="10" fill="#d4d4d4" />
+              <path d="M3 46 Q3 31 23 31 Q43 31 43 46" fill="#d4d4d4" />
             </svg>
           </div>
-          <div className="ml-3 bg-white border border-neutral-200 rounded-full px-3 py-1.5 text-xs font-semibold shadow-sm rotate-3 whitespace-nowrap">
-            Open to opportunities 🚀
+          <div className="ml-3 bg-white border border-neutral-200 rounded-full px-3 py-1.5 text-xs font-semibold shadow-sm rotate-3 whitespace-nowrap text-neutral-700">
+            Open to opportunities ✦
           </div>
         </div>
 
+        {/* Name: PGR initials stay black, connecting letters are italic gray — same design language as template accents */}
         <h1 className="text-5xl font-black leading-[1.15] tracking-tight mb-4">
-          <span className="text-indigo-500">P</span>on
-          <span className="text-indigo-500">G</span>angai
-          <span className="text-indigo-500">R</span>aman{" "}
-          <span className="text-neutral-400">NKS</span>
+          <span className="text-neutral-900">P</span>
+          <span className="text-neutral-400 italic">on</span>
+          <span className="text-neutral-900">G</span>
+          <span className="text-neutral-400 italic">angai</span>
+          <span className="text-neutral-900">R</span>
+          <span className="text-neutral-400 italic">aman</span>
+          {" "}
+          <span className="text-neutral-300">NKS</span>
         </h1>
 
-        <p className="text-lg text-neutral-500 font-medium mb-2">
+        <p className="text-base text-neutral-500 font-medium mb-2">
           Frontend Engineer · Building products that matter
         </p>
-        <p className="text-sm text-neutral-400 mb-10">📍 Bangalore</p>
+        <p className="text-sm text-neutral-400 mb-10">Bangalore, India</p>
 
         <div className="flex items-center gap-3">
           <a

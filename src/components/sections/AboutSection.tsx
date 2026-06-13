@@ -36,7 +36,7 @@ export default function AboutSection() {
         reliable, performant, and user-centric products at scale.
       </p>
 
-      <blockquote className="border-l-4 border-indigo-400 pl-5 py-1">
+      <blockquote className="border-l-4 border-neutral-900 pl-5 py-1">
         <p className="text-sm text-neutral-500 italic leading-relaxed">
           &ldquo;Need to make an impact in this world — give back something to the world
           that gave me life. Should make history that stands out.&rdquo;

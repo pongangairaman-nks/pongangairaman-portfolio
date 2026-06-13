@@ -21,11 +21,18 @@ export default function PersonalSection() {
     <section className="bg-white rounded-3xl px-10 py-12 flex flex-col gap-10">
       {/* Personal Quote */}
       <div className="bg-neutral-900 rounded-2xl px-8 py-8 text-center">
-        <p className="text-white text-base font-medium leading-relaxed italic">
-          &ldquo;We came from the stars, and to stardust we shall return. Between those two
-          infinities lies our chance to dance, love, and leave a little light behind!!&rdquo;
+        <div className="text-neutral-600 text-3xl mb-4 font-serif">&ldquo;</div>
+        <p className="text-white text-sm font-medium leading-loose italic">
+          We came from the stars, and to stardust we shall return. Between those two
+          infinities lies our chance to dance, love, and leave a little light behind!!
         </p>
-        <p className="text-neutral-400 text-xs mt-4">— PonGangaiRaman NKS</p>
+        <div className="mt-5 flex items-center justify-center gap-3">
+          <div className="h-px w-8 bg-neutral-700" />
+          <span className="text-neutral-500 text-xs tracking-widest uppercase">
+            PonGangaiRaman NKS
+          </span>
+          <div className="h-px w-8 bg-neutral-700" />
+        </div>
       </div>
 
       {/* Beyond the Code */}
@@ -42,10 +49,10 @@ export default function PersonalSection() {
           {hobbies.map((h) => (
             <div
               key={h.label}
-              className="flex items-center gap-2 bg-neutral-50 border border-neutral-200 rounded-full px-4 py-2 text-sm text-neutral-700"
+              className="flex items-center gap-2 bg-neutral-50 border border-neutral-200 rounded-full px-4 py-2 hover:bg-neutral-100 transition-colors"
             >
-              <span>{h.emoji}</span>
-              <span className="text-xs font-medium">{h.label}</span>
+              <span className="text-sm">{h.emoji}</span>
+              <span className="text-xs font-medium text-neutral-700">{h.label}</span>
             </div>
           ))}
         </div>
@@ -64,7 +71,7 @@ export default function PersonalSection() {
         <ol className="flex flex-col gap-3">
           {funFacts.map((fact, i) => (
             <li key={i} className="flex gap-3 items-start">
-              <span className="text-xs font-black text-indigo-400 mt-0.5 flex-shrink-0">
+              <span className="text-xs font-black text-neutral-300 mt-0.5 shrink-0 w-5">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p className="text-xs text-neutral-600 leading-relaxed">{fact}</p>

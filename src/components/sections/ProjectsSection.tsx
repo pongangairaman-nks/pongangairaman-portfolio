@@ -2,7 +2,7 @@ type Project = {
   name: string;
   description: string;
   tags: string[];
-  highlight?: boolean;
+  featured?: boolean;
 };
 
 const projects: Project[] = [
@@ -11,7 +11,7 @@ const projects: Project[] = [
     description:
       "No-code AI chatbot platform with RAG & visual pipeline builder. Full-stack SaaS enabling non-technical users to build, deploy, and monitor AI chatbots. Includes embeddable SDK, RBAC, rate limiting, and LLM gateway with circuit breaker.",
     tags: ["React", "Express.js", "PostgreSQL", "pgVector", "Redis", "TypeScript"],
-    highlight: true,
+    featured: true,
   },
   {
     name: "Resume Automation Platform",
@@ -24,7 +24,7 @@ const projects: Project[] = [
     description:
       "Interior design project management platform for designers. Features PDF annotation, panorama viewer, 3D model viewer, side-by-side comparison, Shadow Study tools, and real-time preview systems.",
     tags: ["React", "TypeScript", "3D Viewer", "PDF Annotation"],
-    highlight: true,
+    featured: true,
   },
   {
     name: "Real-Time Generator Monitor",
@@ -46,6 +46,23 @@ const projects: Project[] = [
   },
 ];
 
+function ProjectIcon({ name }: { name: string }) {
+  const initials = name
+    .split(" ")
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("");
+  return (
+    <div className="w-full h-28 rounded-xl bg-neutral-100 border border-neutral-200 mb-4 flex flex-col items-center justify-center gap-2">
+      {/* Project preview placeholder — replace with a screenshot or custom icon */}
+      <div className="w-10 h-10 rounded-lg bg-neutral-200 border border-neutral-300 flex items-center justify-center text-sm font-black text-neutral-500">
+        {initials}
+      </div>
+      <span className="text-[10px] text-neutral-400">Project preview</span>
+    </div>
+  );
+}
+
 export default function ProjectsSection() {
   return (
     <section id="projects" className="bg-white rounded-3xl px-10 py-12">
@@ -61,21 +78,23 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`rounded-2xl p-5 flex flex-col gap-3 ${
-              project.highlight
-                ? "bg-indigo-50 border border-indigo-100"
-                : "bg-neutral-50 border border-neutral-100"
-            }`}
+            className="rounded-2xl p-5 flex flex-col bg-neutral-50 border border-neutral-100 hover:border-neutral-300 transition-colors"
           >
-            <div className="flex items-start justify-between gap-2">
+            <ProjectIcon name={project.name} />
+
+            <div className="flex items-start justify-between gap-2 mb-2">
               <h3 className="text-sm font-bold text-neutral-900">{project.name}</h3>
-              {project.highlight && (
-                <span className="text-[10px] font-semibold text-indigo-500 bg-white border border-indigo-200 rounded-full px-2 py-0.5 whitespace-nowrap">
+              {project.featured && (
+                <span className="text-[10px] font-semibold text-neutral-500 bg-white border border-neutral-200 rounded-full px-2 py-0.5 whitespace-nowrap shrink-0">
                   Featured
                 </span>
               )}
             </div>
-            <p className="text-xs text-neutral-600 leading-relaxed">{project.description}</p>
+
+            <p className="text-xs text-neutral-500 leading-relaxed mb-4">
+              {project.description}
+            </p>
+
             <div className="flex flex-wrap gap-1.5 mt-auto">
               {project.tags.map((tag) => (
                 <span

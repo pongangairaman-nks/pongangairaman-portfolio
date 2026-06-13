@@ -5,6 +5,7 @@ type Project = {
 
 type Experience = {
   company: string;
+  initials: string;
   role: string;
   period: string;
   location: string;
@@ -14,6 +15,7 @@ type Experience = {
 const experiences: Experience[] = [
   {
     company: "Graphy Labs Private Limited (by Unacademy)",
+    initials: "GL",
     role: "Frontend Developer",
     period: "Jun 2025 – Present",
     location: "Bangalore",
@@ -79,6 +81,7 @@ const experiences: Experience[] = [
   },
   {
     company: "Krayen",
+    initials: "KR",
     role: "Frontend Developer",
     period: "Prior",
     location: "",
@@ -109,25 +112,37 @@ export default function ExperienceSection() {
       <div className="flex flex-col gap-10">
         {experiences.map((exp) => (
           <div key={exp.company} className="relative pl-6 border-l-2 border-neutral-100">
-            <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-indigo-400" />
-            <div className="flex items-start justify-between mb-1">
-              <div>
-                <h3 className="text-sm font-bold text-neutral-900">{exp.company}</h3>
-                <p className="text-xs text-neutral-500">{exp.role}{exp.location ? ` · ${exp.location}` : ""}</p>
+            <div className="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-neutral-900" />
+
+            <div className="flex items-start justify-between mb-3">
+              <div className="flex items-center gap-3">
+                {/* Company logo placeholder — replace with <img> when you have logos */}
+                <div className="w-8 h-8 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center text-[10px] font-black text-neutral-600 shrink-0">
+                  {exp.initials}
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-neutral-900">{exp.company}</h3>
+                  <p className="text-xs text-neutral-500">
+                    {exp.role}
+                    {exp.location ? ` · ${exp.location}` : ""}
+                  </p>
+                </div>
               </div>
-              <span className="text-xs text-neutral-400 bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1 whitespace-nowrap ml-4">
+              <span className="text-xs text-neutral-400 bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1 whitespace-nowrap ml-4 shrink-0">
                 {exp.period}
               </span>
             </div>
 
-            <div className="mt-4 flex flex-col gap-4">
+            <div className="mt-4 flex flex-col gap-5">
               {exp.projects.map((proj) => (
                 <div key={proj.name}>
-                  <h4 className="text-xs font-semibold text-indigo-500 mb-1.5">{proj.name}</h4>
-                  <ul className="flex flex-col gap-1">
+                  <h4 className="text-xs font-semibold text-neutral-900 uppercase tracking-wider mb-2">
+                    {proj.name}
+                  </h4>
+                  <ul className="flex flex-col gap-1.5">
                     {proj.bullets.map((b, i) => (
                       <li key={i} className="text-xs text-neutral-600 leading-relaxed flex gap-2">
-                        <span className="text-neutral-300 mt-0.5 flex-shrink-0">•</span>
+                        <span className="text-neutral-300 mt-0.5 shrink-0">—</span>
                         {b}
                       </li>
                     ))}
