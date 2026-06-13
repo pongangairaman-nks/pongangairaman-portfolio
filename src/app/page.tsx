@@ -45,11 +45,11 @@ export default function Home() {
       </Panel>
 
       <Panel surface="white" z={25}>
-        <QuoteSection />
+        <BeyondTheCodeSection />
       </Panel>
 
       <Panel surface="gray" z={20}>
-        <BeyondTheCodeSection />
+        <QuoteSection />
       </Panel>
 
       <Panel surface="white" z={15}>

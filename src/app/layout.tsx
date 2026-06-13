@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
@@ -31,6 +32,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -21,10 +21,10 @@ export default function Panel({
   return (
     <div
       className={[
-        "relative rounded-b-[2.5rem]",
+        "relative",
+        last ? "" : "rounded-b-[5rem]",
         surface === "white" ? "panel-white" : "panel-gray",
-        first ? "mt-1.5 rounded-t-[2.5rem]" : "-mt-10",
-        last ? "mb-1.5" : "",
+        first ? "" : "-mt-20 pt-12",
       ].join(" ")}
       style={{ zIndex: z }}
     >

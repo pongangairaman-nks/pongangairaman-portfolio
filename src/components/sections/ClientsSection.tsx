@@ -3,7 +3,7 @@
 
 function ReactMark() {
   return (
-    <svg viewBox="-12 -12 24 24" className="h-10 w-10 shrink-0" fill="none" stroke="currentColor">
+    <svg viewBox="-12 -12 24 24" className="h-14 w-14 shrink-0" fill="none" stroke="currentColor">
       <circle r="2.05" fill="currentColor" stroke="none" />
       <g strokeWidth="1">
         <ellipse rx="11" ry="4.2" />
@@ -16,7 +16,7 @@ function ReactMark() {
 
 function NextMark() {
   return (
-    <svg viewBox="0 0 24 24" className="h-10 w-10 shrink-0">
+    <svg viewBox="0 0 24 24" className="h-14 w-14 shrink-0">
       <circle cx="12" cy="12" r="11" fill="currentColor" />
       <path
         d="M9 8.2v7.6M9 8.2l6.4 8.3M15.4 8.2v5.4"
@@ -31,7 +31,7 @@ function NextMark() {
 
 function TsMark() {
   return (
-    <svg viewBox="0 0 24 24" className="h-10 w-10 shrink-0">
+    <svg viewBox="0 0 24 24" className="h-14 w-14 shrink-0">
       <rect x="1" y="1" width="22" height="22" rx="4" fill="currentColor" />
       <text
         x="12.5"
@@ -58,7 +58,7 @@ function GraphqlMark() {
     [3.6, 7.25],
   ];
   return (
-    <svg viewBox="0 0 24 24" className="h-10 w-10 shrink-0" stroke="currentColor" fill="none">
+    <svg viewBox="0 0 24 24" className="h-14 w-14 shrink-0" stroke="currentColor" fill="none">
       <polygon points="12,2.5 20.4,7.25 20.4,16.75 12,21.5 3.6,16.75 3.6,7.25" strokeWidth="1.1" />
       <line x1="12" y1="2.5" x2="3.6" y2="16.75" strokeWidth="1.1" />
       <line x1="12" y1="2.5" x2="20.4" y2="16.75" strokeWidth="1.1" />
@@ -72,7 +72,7 @@ function GraphqlMark() {
 
 function ReduxMark() {
   return (
-    <svg viewBox="0 0 24 24" className="h-10 w-10 shrink-0" stroke="currentColor" fill="none">
+    <svg viewBox="0 0 24 24" className="h-14 w-14 shrink-0" stroke="currentColor" fill="none">
       <path d="M7.4 7C3.6 9 2.6 14 5.6 17s9 2 11-1.2" strokeWidth="1.4" strokeLinecap="round" />
       <path d="M16.8 6.8c3.8 2 3.8 8 0.8 11" strokeWidth="1.4" strokeLinecap="round" />
       <circle cx="7.2" cy="6.6" r="2.2" fill="currentColor" stroke="none" />
@@ -96,7 +96,7 @@ export default function ClientsSection() {
   const track = [...stack, ...stack];
 
   return (
-    <div className="py-32 md:py-44">
+    <div className="pt-28 pb-20 md:pt-32 md:pb-24">
       <div
         className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
         data-reveal
@@ -108,7 +108,7 @@ export default function ClientsSection() {
               className="flex shrink-0 items-center gap-3 text-neutral-400 transition-colors hover:text-neutral-700"
             >
               {tech.mark}
-              <span className="whitespace-nowrap text-xl font-semibold tracking-tight md:text-2xl">
+              <span className="whitespace-nowrap text-2xl font-semibold tracking-tight md:text-3xl">
                 {tech.name}
               </span>
             </div>
