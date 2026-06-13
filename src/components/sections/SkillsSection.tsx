@@ -95,7 +95,7 @@ export default function SkillsSection() {
   return (
     <section className="px-12 py-24">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-14">
+        <div className="text-center mb-14" data-reveal>
           <h2 className="text-4xl font-bold leading-snug tracking-tight">
             Tech I build with
             <br />
@@ -103,7 +103,7 @@ export default function SkillsSection() {
           </h2>
         </div>
 
-        <div className="flex items-center gap-4 mb-10">
+        <div className="flex items-center gap-4 mb-10" data-reveal>
           <div className="flex-1 h-px bg-neutral-400" />
           <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
             Skills
@@ -112,8 +112,13 @@ export default function SkillsSection() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {skillCategories.map((cat) => (
-            <div key={cat.title} className="flex flex-col gap-3 bg-white border border-neutral-200 rounded-2xl p-5">
+          {skillCategories.map((cat, i) => (
+            <div
+              key={cat.title}
+              data-reveal
+              style={{ "--reveal-delay": `${(i % 4) * 80}ms` } as React.CSSProperties}
+              className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
               <div className="text-neutral-600">{cat.icon}</div>
               <h3 className="text-sm font-semibold text-neutral-900">{cat.title}</h3>
               <p className="text-xs text-neutral-500 leading-relaxed">{cat.tags}</p>

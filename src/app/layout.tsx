@@ -20,7 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${hanken.variable} h-full antialiased`}>
-      <body className="min-h-full" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full" suppressHydrationWarning>
+        {/* If JS is disabled, reveal everything immediately. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                "[data-reveal]{opacity:1 !important;transform:none !important}",
+            }}
+          />
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

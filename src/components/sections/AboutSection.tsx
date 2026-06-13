@@ -6,43 +6,74 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-12 py-24">
-      <div className="max-w-4xl mx-auto w-full">
-        <div className="flex items-center gap-4 mb-14">
-          <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
+    <section className="px-6 py-28 md:px-12">
+      <div className="mx-auto max-w-5xl">
+        {/* Divider */}
+        <div className="mb-14 flex items-center gap-4" data-reveal>
+          <div className="h-px flex-1 bg-neutral-300" />
+          <div className="rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
             About
           </div>
-          <div className="flex-1 h-px bg-neutral-400" />
+          <div className="h-px flex-1 bg-neutral-300" />
         </div>
 
-        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-14">
-          {stats.map((stat) => (
+        {/* Heading */}
+        <h2
+          className="mb-14 text-center text-3xl font-bold leading-[1.1] tracking-tight text-foreground md:text-4xl lg:text-5xl"
+          data-reveal
+        >
+          Engineering products that
+          <br />
+          <span className="text-neutral-400 italic">scale, perform, and last.</span>
+        </h2>
+
+        {/* Stats */}
+        <div className="mb-16 grid grid-cols-3 gap-3 sm:gap-4">
+          {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="flex-1 bg-white border border-neutral-200 rounded-2xl px-6 py-6 text-center"
+              data-reveal
+              style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
+              className="rounded-2xl border border-neutral-200/70 bg-card px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="text-3xl font-black text-neutral-900">{stat.value}</div>
-              <div className="text-sm text-neutral-500 mt-1.5">{stat.label}</div>
+              <div className="text-3xl font-black text-neutral-900 md:text-4xl">
+                {stat.value}
+              </div>
+              <div className="mt-1.5 text-xs text-neutral-500 md:text-sm">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
 
-        <p className="text-base text-neutral-600 leading-relaxed mb-10 max-w-2xl">
-          Frontend Engineer with 4 years of experience building scalable, high-performance
-          web applications using React, TypeScript, and Next.js. Skilled in architecting
-          SPAs, optimizing performance, and implementing robust state management for
-          complex, data-driven systems. Experienced in real-time features, API integrations
-          (REST &amp; GraphQL), and modular frontend architectures. Focused on delivering
-          reliable, performant, and user-centric products at scale.
-        </p>
-
-        <blockquote className="border-l-4 border-neutral-900 pl-6 py-1">
-          <p className="text-base text-neutral-500 italic leading-relaxed">
-            &ldquo;Need to make an impact in this world — give back something to the world
-            that gave me life. Should make history that stands out.&rdquo;
+        {/* Bio — two-column editorial layout */}
+        <div
+          className="mb-16 grid gap-8 md:grid-cols-2 md:gap-14"
+          data-reveal
+        >
+          <p className="text-[15px] leading-relaxed text-neutral-600 md:text-base">
+            Frontend Engineer with 4 years of experience building scalable,
+            high-performance web applications using React, TypeScript, and
+            Next.js. Skilled in architecting SPAs, optimizing performance, and
+            implementing robust state management for complex, data-driven
+            systems.
           </p>
-          <footer className="text-sm text-neutral-400 mt-2">— What drives me</footer>
+          <p className="text-[15px] leading-relaxed text-neutral-600 md:text-base">
+            Experienced in real-time features, API integrations (REST &amp;
+            GraphQL), and modular frontend architectures. Focused on delivering
+            reliable, performant, and user-centric products at scale — the kind
+            that hold up long after launch.
+          </p>
+        </div>
+
+        {/* Pull quote — centered */}
+        <blockquote className="mx-auto max-w-3xl text-center" data-reveal>
+          <p className="text-xl italic leading-relaxed text-neutral-700 md:text-2xl">
+            &ldquo;Need to make an impact in this world — give back something to
+            the world that gave me life. Should make history that stands
+            out.&rdquo;
+          </p>
+          <footer className="mt-5 text-sm text-neutral-400">— What drives me</footer>
         </blockquote>
       </div>
     </section>

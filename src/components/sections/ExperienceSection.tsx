@@ -102,7 +102,7 @@ export default function ExperienceSection() {
   return (
     <section className="px-12 py-24">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-14">
+        <div className="flex items-center gap-4 mb-14" data-reveal>
           <div className="flex-1 h-px bg-neutral-400" />
           <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
             Experience
@@ -112,7 +112,7 @@ export default function ExperienceSection() {
 
         <div className="flex flex-col gap-14">
           {experiences.map((exp) => (
-            <div key={exp.company} className="relative pl-7 border-l-2 border-neutral-300">
+            <div key={exp.company} data-reveal className="relative pl-7 border-l-2 border-neutral-300">
               <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-background" />
 
               <div className="flex items-start justify-between mb-5">

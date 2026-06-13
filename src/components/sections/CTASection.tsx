@@ -1,6 +1,6 @@
 function HandshakeIcon() {
   return (
-    <div className="w-20 h-20 rounded-full bg-white border border-neutral-200 flex items-center justify-center mb-8">
+    <div className="w-20 h-20 rounded-full bg-white border border-neutral-200 flex items-center justify-center mb-8" data-reveal>
       <svg
         width="40"
         height="40"
@@ -25,15 +25,22 @@ export default function CTASection() {
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-12 py-24">
       <HandshakeIcon />
 
-      <h2 className="text-7xl font-black leading-[1.1] tracking-tight mb-12">
+      <h2
+        className="text-6xl font-bold leading-[1.1] tracking-tight mb-12 md:text-7xl"
+        data-reveal
+      >
         Let&apos;s build something{" "}
         <span className="text-neutral-400 italic">that matters</span>
       </h2>
 
-      <div className="flex items-center gap-4">
+      <div
+        className="flex items-center gap-4"
+        data-reveal
+        style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+      >
         <a
           href="mailto:pongangairamannks@gmail.com"
-          className="inline-flex items-center gap-2 bg-neutral-900 text-white px-8 py-4 rounded-full font-medium text-base hover:bg-neutral-800 transition-colors"
+          className="inline-flex items-center gap-2 bg-neutral-900 text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-300 hover:-translate-y-0.5 hover:bg-neutral-800 active:scale-95"
         >
           <svg
             width="16"
@@ -54,7 +61,7 @@ export default function CTASection() {
           href="https://www.linkedin.com/in/pongangairaman-nks"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-neutral-700 px-8 py-4 rounded-full font-medium text-base border border-neutral-400 hover:bg-neutral-300 transition-colors"
+          className="inline-flex items-center gap-2 text-neutral-700 px-8 py-4 rounded-full font-medium text-base border border-neutral-400 transition-all duration-300 hover:-translate-y-0.5 hover:bg-neutral-300 active:scale-95"
         >
           LinkedIn
         </a>

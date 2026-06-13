@@ -92,30 +92,27 @@ const stack = [
 ];
 
 export default function ClientsSection() {
-  return (
-    <section>
-      {/* White logo band */}
-      <div className="mx-auto max-w-7xl px-3 md:px-4">
-        <div className="rounded-[2.5rem] bg-card px-6 py-12 shadow-sm md:px-16">
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 text-neutral-500 md:justify-between md:gap-x-6">
-            {stack.map((tech) => (
-              <div key={tech.name} className="flex items-center gap-2.5">
-                {tech.mark}
-                <span className="text-lg font-semibold tracking-tight md:text-xl">
-                  {tech.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  // Duplicated so the track can loop seamlessly under the marquee animation.
+  const track = [...stack, ...stack];
 
-      {/* Statement */}
-      <div className="px-6 py-24 text-center md:py-28">
-        <h2 className="mx-auto max-w-[44rem] text-balance text-4xl font-bold leading-[1.12] tracking-tight text-foreground md:text-5xl lg:text-[3.25rem]">
-          Building with modern, battle-tested technologies.
-        </h2>
+  return (
+    <div
+      className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
+      data-reveal
+    >
+      <div className="flex w-max items-center gap-x-14 pl-14 animate-marquee hover:[animation-play-state:paused] md:gap-x-20 md:pl-20">
+        {track.map((tech, i) => (
+          <div
+            key={`${tech.name}-${i}`}
+            className="flex shrink-0 items-center gap-2.5 text-neutral-400 transition-colors hover:text-neutral-700"
+          >
+            {tech.mark}
+            <span className="whitespace-nowrap text-lg font-semibold tracking-tight md:text-xl">
+              {tech.name}
+            </span>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

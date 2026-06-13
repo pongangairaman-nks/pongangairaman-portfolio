@@ -62,8 +62,18 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-28 md:px-12">
+      {/* Lead statement */}
+      <div className="py-24 text-center md:py-28">
+        <h2
+          className="mx-auto max-w-[44rem] text-balance text-4xl font-bold leading-[1.12] tracking-tight text-foreground md:text-5xl lg:text-[3.25rem]"
+          data-reveal
+        >
+          Building with modern, battle-tested technologies.
+        </h2>
+      </div>
+
       {/* Divider with centered pill */}
-      <div className="relative mb-16 flex items-center justify-center">
+      <div className="relative mb-16 flex items-center justify-center" data-reveal>
         <div className="h-px w-full bg-neutral-300" />
         <span className="absolute rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
           Services
@@ -71,9 +81,16 @@ export default function ServicesSection() {
       </div>
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-        {services.map((s) => (
-          <div key={s.title}>
-            <div className="mb-5 text-neutral-700">{s.icon}</div>
+        {services.map((s, i) => (
+          <div
+            key={s.title}
+            className="group"
+            data-reveal
+            style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
+          >
+            <div className="mb-5 text-neutral-700 transition-transform duration-300 group-hover:-translate-y-1 group-hover:text-neutral-900">
+              {s.icon}
+            </div>
             <h3 className="mb-3 text-lg font-semibold text-foreground">{s.title}</h3>
             <p className="text-[15px] leading-relaxed text-neutral-500">{s.desc}</p>
           </div>

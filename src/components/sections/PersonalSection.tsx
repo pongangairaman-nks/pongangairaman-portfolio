@@ -18,19 +18,24 @@ const funFacts = [
 
 export default function PersonalSection() {
   return (
-    <section className="px-12 py-24">
-      <div className="max-w-4xl mx-auto flex flex-col gap-14">
-
+    <section className="px-6 py-28 md:px-12">
+      <div className="mx-auto flex max-w-5xl flex-col gap-16">
         {/* Personal Quote */}
-        <div className="bg-neutral-900 rounded-2xl px-10 py-12 text-center">
-          <div className="text-neutral-600 text-5xl mb-4 leading-none font-serif">&ldquo;</div>
-          <p className="text-white text-base font-medium leading-loose italic max-w-2xl mx-auto">
-            We came from the stars, and to stardust we shall return. Between those two
-            infinities lies our chance to dance, love, and leave a little light behind!!
+        <div
+          className="rounded-3xl bg-neutral-900 px-8 py-14 text-center md:px-10"
+          data-reveal
+        >
+          <div className="mb-4 font-serif text-5xl leading-none text-neutral-600">
+            &ldquo;
+          </div>
+          <p className="mx-auto max-w-2xl text-base font-medium italic leading-loose text-white md:text-lg">
+            We came from the stars, and to stardust we shall return. Between those
+            two infinities lies our chance to dance, love, and leave a little
+            light behind!!
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <div className="h-px w-10 bg-neutral-700" />
-            <span className="text-neutral-500 text-xs tracking-widest uppercase">
+            <span className="text-xs uppercase tracking-widest text-neutral-500">
               PonGangaiRaman NKS
             </span>
             <div className="h-px w-10 bg-neutral-700" />
@@ -39,22 +44,24 @@ export default function PersonalSection() {
 
         {/* Beyond the Code */}
         <div>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 h-px bg-neutral-400" />
-            <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
+          <div className="mb-8 flex items-center gap-4" data-reveal>
+            <div className="h-px flex-1 bg-neutral-300" />
+            <div className="rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
               Beyond the Code
             </div>
-            <div className="flex-1 h-px bg-neutral-400" />
+            <div className="h-px flex-1 bg-neutral-300" />
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3" data-reveal>
             {hobbies.map((h) => (
               <div
                 key={h.label}
-                className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-full px-5 py-2.5 hover:border-neutral-400 transition-colors"
+                className="flex items-center gap-2.5 rounded-full border border-neutral-200/70 bg-card px-5 py-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <span className="text-base">{h.emoji}</span>
-                <span className="text-sm font-medium text-neutral-700">{h.label}</span>
+                <span className="text-sm font-medium text-neutral-700">
+                  {h.label}
+                </span>
               </div>
             ))}
           </div>
@@ -62,21 +69,26 @@ export default function PersonalSection() {
 
         {/* Fun Facts */}
         <div>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 h-px bg-neutral-400" />
-            <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
+          <div className="mb-8 flex items-center gap-4" data-reveal>
+            <div className="h-px flex-1 bg-neutral-300" />
+            <div className="rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
               Fun Facts
             </div>
-            <div className="flex-1 h-px bg-neutral-400" />
+            <div className="h-px flex-1 bg-neutral-300" />
           </div>
 
-          <ol className="flex flex-col gap-5">
+          <ol className="grid gap-4 sm:grid-cols-2">
             {funFacts.map((fact, i) => (
-              <li key={i} className="flex gap-5 items-start">
-                <span className="text-sm font-black text-neutral-300 mt-0.5 shrink-0 w-6 tabular-nums">
+              <li
+                key={i}
+                data-reveal
+                style={{ "--reveal-delay": `${(i % 2) * 90}ms` } as React.CSSProperties}
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              >
+                <span className="shrink-0 text-2xl font-black leading-none tabular-nums text-neutral-300">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-sm text-neutral-600 leading-relaxed">{fact}</p>
+                <p className="text-sm leading-relaxed text-neutral-600">{fact}</p>
               </li>
             ))}
           </ol>
