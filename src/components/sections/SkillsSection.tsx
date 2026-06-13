@@ -1,3 +1,5 @@
+import SectionDivider from "@/components/ui/SectionDivider";
+
 const skillCategories = [
   {
     icon: (
@@ -103,13 +105,7 @@ export default function SkillsSection() {
           </h2>
         </div>
 
-        <div className="flex items-center gap-4 mb-10" data-reveal>
-          <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
-            Skills
-          </div>
-          <div className="flex-1 h-px bg-neutral-400" />
-        </div>
+        <SectionDivider label="Skills" className="mb-10" />
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {skillCategories.map((cat, i) => (
@@ -117,7 +113,7 @@ export default function SkillsSection() {
               key={cat.title}
               data-reveal
               style={{ "--reveal-delay": `${(i % 4) * 80}ms` } as React.CSSProperties}
-              className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="flex flex-col gap-3 rounded-2xl border border-black/5 bg-[var(--card-surface)] p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="text-neutral-600">{cat.icon}</div>
               <h3 className="text-sm font-semibold text-neutral-900">{cat.title}</h3>

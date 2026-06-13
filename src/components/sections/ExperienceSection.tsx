@@ -1,3 +1,5 @@
+import SectionDivider from "@/components/ui/SectionDivider";
+
 type Project = {
   name: string;
   bullets: string[];
@@ -54,6 +56,34 @@ const experiences: Experience[] = [
           "Developed Broadcast and Trigger-based workflows and an interactive Chart.js dashboard.",
         ],
       },
+    ],
+  },
+  {
+    company: "Mirafra Technologies Private Limited",
+    initials: "MT",
+    role: "Frontend Developer",
+    period: "Jan 2025 – Jun 2025",
+    location: "Bangalore",
+    projects: [
+      {
+        name: "OTT SaaS Platform (White-label)",
+        bullets: [
+          "Built a white-label OTT platform using Next.js and Server-Side Rendering (SSR) to deliver optimized content experiences.",
+          "Implemented JWT-based authentication, Role-Based Access Control (RBAC), and secure session management across multiple subdomains.",
+          "Designed a multi-tenant architecture enabling client-specific branding and platform customization.",
+          "Optimized rendering and caching strategies to achieve fast page loads and improved content delivery performance.",
+          "Automated multi-stage CI/CD pipelines using GitHub Actions for streamlined testing and production deployments.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "Dataphi Analytics Labs Private Limited",
+    initials: "DA",
+    role: "Frontend Developer",
+    period: "Jun 2022 – Dec 2024",
+    location: "Bangalore",
+    projects: [
       {
         name: "Hiring Platform Web App",
         bullets: [
@@ -83,8 +113,8 @@ const experiences: Experience[] = [
     company: "Krayen",
     initials: "KR",
     role: "Frontend Developer",
-    period: "Prior",
-    location: "",
+    period: "Feb 2022 – May 2022",
+    location: "Bangalore",
     projects: [
       {
         name: "Product Suite",
@@ -100,25 +130,22 @@ const experiences: Experience[] = [
 
 export default function ExperienceSection() {
   return (
-    <section className="px-12 py-24">
+    <section className="px-6 py-28 md:px-12">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-14" data-reveal>
-          <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
-            Experience
-          </div>
-          <div className="flex-1 h-px bg-neutral-400" />
-        </div>
+        <SectionDivider label="Experience" />
 
         <div className="flex flex-col gap-14">
           {experiences.map((exp) => (
-            <div key={exp.company} data-reveal className="relative pl-7 border-l-2 border-neutral-300">
-              <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-background" />
+            <div
+              key={exp.company}
+              data-reveal
+              className="relative pl-7 border-l-2 border-neutral-300"
+            >
+              <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-[var(--surface)]" />
 
-              <div className="flex items-start justify-between mb-5">
-                <div className="flex items-center gap-4">
-                  {/* Company logo placeholder — replace with <img> when available */}
-                  <div className="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-xs font-black text-neutral-600 shrink-0">
+              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[var(--card-surface)] border border-black/5 flex items-center justify-center text-xs font-black text-neutral-600 shrink-0">
                     {exp.initials}
                   </div>
                   <div>
@@ -129,7 +156,7 @@ export default function ExperienceSection() {
                     </p>
                   </div>
                 </div>
-                <span className="text-xs text-neutral-500 bg-white border border-neutral-200 rounded-full px-4 py-1.5 whitespace-nowrap ml-4 shrink-0">
+                <span className="text-xs text-neutral-500 bg-[var(--card-surface)] border border-black/5 rounded-full px-4 py-1.5 whitespace-nowrap ml-4 shrink-0">
                   {exp.period}
                 </span>
               </div>

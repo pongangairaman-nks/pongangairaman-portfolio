@@ -8,33 +8,48 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import PersonalSection from "@/components/sections/PersonalSection";
 import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/sections/Footer";
+import Panel from "@/components/ui/Panel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Home() {
   return (
     <main className="relative mt-1.5">
-      {/* Hero — gray card. Rounds at the top (green frame) and bottom (into white). */}
-      <div className="relative z-30 rounded-t-[2.5rem] rounded-b-[2.5rem] bg-background">
+      <Panel surface="gray" z={90} first>
         <HeroSection />
-      </div>
+      </Panel>
 
-      {/* Logo strip — white band tucked under the hero's rounded bottom,
-          rounding at its own bottom into the gray below (stacked cards). */}
-      <div className="relative z-20 -mt-10 rounded-b-[2.5rem] bg-card pt-24 pb-16">
+      <Panel surface="white" z={80}>
         <ClientsSection />
-      </div>
+      </Panel>
 
-      {/* Everything else — gray, tucked under the white band. */}
-      <div className="relative z-10 -mt-10 mb-1.5 rounded-b-[2.5rem] bg-background pt-10">
+      <Panel surface="gray" z={70}>
         <ServicesSection />
+      </Panel>
+
+      <Panel surface="white" z={60}>
         <AboutSection />
+      </Panel>
+
+      <Panel surface="gray" z={50}>
         <SkillsSection />
+      </Panel>
+
+      <Panel surface="white" z={40}>
         <ExperienceSection />
+      </Panel>
+
+      <Panel surface="gray" z={30}>
         <ProjectsSection />
+      </Panel>
+
+      <Panel surface="white" z={20}>
         <PersonalSection />
+      </Panel>
+
+      <Panel surface="gray" z={10} last>
         <CTASection />
         <Footer />
-      </div>
+      </Panel>
 
       <ScrollReveal />
     </main>

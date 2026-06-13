@@ -9,6 +9,24 @@
   --card: #ffffff;
   /* Charcoal — softer than pure black, matches the reference headings */
   --foreground: #2c2c2c;
+  /* Per-section surface + contrasting card color (overridden by .panel-*) */
+  --surface: var(--background);
+  --card-surface: var(--card);
+}
+
+/* Alternating section surfaces (the stacked rounded cards). Each panel sets its
+   own background and exposes --surface (its own bg) plus --card-surface (the
+   contrasting color), so cards/pills inside auto-invert per section. */
+.panel-gray {
+  background: var(--background);
+  --surface: var(--background);
+  --card-surface: var(--card);
+}
+
+.panel-white {
+  background: var(--card);
+  --surface: var(--card);
+  --card-surface: var(--background);
 }
 
 @theme inline {

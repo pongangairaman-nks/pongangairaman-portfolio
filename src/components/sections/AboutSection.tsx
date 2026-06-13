@@ -1,7 +1,9 @@
+import SectionDivider from "@/components/ui/SectionDivider";
+
 const stats = [
   { label: "Years Experience", value: "4+" },
   { label: "Projects Shipped", value: "10+" },
-  { label: "Companies", value: "2" },
+  { label: "Companies", value: "4" },
 ];
 
 export default function AboutSection() {
@@ -9,13 +11,7 @@ export default function AboutSection() {
     <section className="px-6 py-28 md:px-12">
       <div className="mx-auto max-w-5xl">
         {/* Divider */}
-        <div className="mb-14 flex items-center gap-4" data-reveal>
-          <div className="h-px flex-1 bg-neutral-300" />
-          <div className="rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
-            About
-          </div>
-          <div className="h-px flex-1 bg-neutral-300" />
-        </div>
+        <SectionDivider label="About" />
 
         {/* Heading */}
         <h2
@@ -34,7 +30,7 @@ export default function AboutSection() {
               key={stat.label}
               data-reveal
               style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
-              className="rounded-2xl border border-neutral-200/70 bg-card px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-black/5 bg-[var(--card-surface)] px-4 py-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="text-3xl font-black text-neutral-900 md:text-4xl">
                 {stat.value}

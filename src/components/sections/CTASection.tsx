@@ -1,6 +1,6 @@
 function HandshakeIcon() {
   return (
-    <div className="w-20 h-20 rounded-full bg-white border border-neutral-200 flex items-center justify-center mb-8" data-reveal>
+    <div className="w-20 h-20 rounded-full bg-[var(--card-surface)] border border-black/5 flex items-center justify-center mb-8" data-reveal>
       <svg
         width="40"
         height="40"
@@ -29,7 +29,8 @@ export default function CTASection() {
         className="text-6xl font-bold leading-[1.1] tracking-tight mb-12 md:text-7xl"
         data-reveal
       >
-        Let&apos;s build something{" "}
+        Let&apos;s build something
+        <br />
         <span className="text-neutral-400 italic">that matters</span>
       </h2>
 

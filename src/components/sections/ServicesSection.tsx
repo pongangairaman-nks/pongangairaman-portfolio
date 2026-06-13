@@ -1,3 +1,5 @@
+import SectionDivider from "@/components/ui/SectionDivider";
+
 const iconProps = {
   width: 28,
   height: 28,
@@ -72,13 +74,8 @@ export default function ServicesSection() {
         </h2>
       </div>
 
-      {/* Divider with centered pill */}
-      <div className="relative mb-16 flex items-center justify-center" data-reveal>
-        <div className="h-px w-full bg-neutral-300" />
-        <span className="absolute rounded-full bg-card px-5 py-2 text-xs font-medium text-neutral-600 shadow-sm">
-          Services
-        </span>
-      </div>
+      {/* Divider */}
+      <SectionDivider label="Services" className="mb-16" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {services.map((s, i) => (

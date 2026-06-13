@@ -1,3 +1,5 @@
+import SectionDivider from "@/components/ui/SectionDivider";
+
 type Project = {
   name: string;
   description: string;
@@ -67,13 +69,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="px-12 py-24">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-14" data-reveal>
-          <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
-            Projects
-          </div>
-          <div className="flex-1 h-px bg-neutral-400" />
-        </div>
+        <SectionDivider label="Projects" />
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((project, i) => (
@@ -81,7 +77,7 @@ export default function ProjectsSection() {
               key={project.name}
               data-reveal
               style={{ "--reveal-delay": `${(i % 2) * 90}ms` } as React.CSSProperties}
-              className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-lg"
+              className="flex flex-col rounded-2xl border border-black/5 bg-[var(--card-surface)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <ProjectPlaceholder name={project.name} />
 

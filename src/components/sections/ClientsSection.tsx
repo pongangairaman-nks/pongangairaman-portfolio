@@ -96,22 +96,24 @@ export default function ClientsSection() {
   const track = [...stack, ...stack];
 
   return (
-    <div
-      className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
-      data-reveal
-    >
-      <div className="flex w-max items-center gap-x-14 pl-14 animate-marquee hover:[animation-play-state:paused] md:gap-x-20 md:pl-20">
-        {track.map((tech, i) => (
-          <div
-            key={`${tech.name}-${i}`}
-            className="flex shrink-0 items-center gap-2.5 text-neutral-400 transition-colors hover:text-neutral-700"
-          >
-            {tech.mark}
-            <span className="whitespace-nowrap text-lg font-semibold tracking-tight md:text-xl">
-              {tech.name}
-            </span>
-          </div>
-        ))}
+    <div className="py-32 md:py-44">
+      <div
+        className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
+        data-reveal
+      >
+        <div className="flex w-max items-center gap-x-14 pl-14 animate-marquee hover:[animation-play-state:paused] md:gap-x-20 md:pl-20">
+          {track.map((tech, i) => (
+            <div
+              key={`${tech.name}-${i}`}
+              className="flex shrink-0 items-center gap-2.5 text-neutral-400 transition-colors hover:text-neutral-700"
+            >
+              {tech.mark}
+              <span className="whitespace-nowrap text-lg font-semibold tracking-tight md:text-xl">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

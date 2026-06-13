@@ -15,7 +15,7 @@ export default function HeroSection() {
           <CopyButton text={EMAIL} />
           <a
             href="/cv.pdf"
-            className="rounded-full bg-card px-6 py-2.5 text-sm font-medium text-neutral-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-neutral-50 active:scale-95"
+            className="rounded-full bg-[var(--card-surface)] px-6 py-2.5 text-sm font-medium text-neutral-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 active:scale-95"
           >
             CV
           </a>
@@ -54,7 +54,7 @@ export default function HeroSection() {
           />
           {/* Positioning wrapper keeps the float animation from fighting the centering transform */}
           <div className="sm:absolute sm:top-1/2 sm:left-[70%] sm:-translate-y-1/2">
-            <span className="group inline-block whitespace-nowrap rounded-full border border-black/5 bg-card px-4 py-2 text-[15px] font-medium text-neutral-700 shadow-md sm:-rotate-3 sm:animate-badge-float">
+            <span className="group inline-block whitespace-nowrap rounded-full border border-black/5 bg-[var(--card-surface)] px-4 py-2 text-[15px] font-medium text-neutral-700 shadow-md sm:-rotate-3 sm:animate-badge-float">
               PonGangaiRaman NKS{" "}
               <span className="inline-block origin-[70%_70%] group-hover:animate-[wave_1.6s_ease-in-out]">
                 👋
