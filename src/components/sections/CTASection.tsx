@@ -26,14 +26,15 @@ export default function CTASection() {
       <HandshakeIcon />
 
       <h2 className="text-5xl font-black leading-[1.15] tracking-tight mb-10">
-        Tell me about{" "}
-        <span className="text-neutral-400 italic">your next</span>
-        <br />
-        project
+        Let&apos;s build something{" "}
+        <span className="text-neutral-400 italic">that matters</span>
       </h2>
 
       <div className="flex items-center gap-3">
-        <button className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-neutral-800 transition-colors cursor-pointer">
+        <a
+          href="mailto:pongangairamannks@gmail.com"
+          className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-neutral-800 transition-colors"
+        >
           <svg
             width="14"
             height="14"
@@ -48,10 +49,15 @@ export default function CTASection() {
             <path d="M1 4.5 L7 8.5 L13 4.5" />
           </svg>
           Email Me
-        </button>
-        <button className="inline-flex items-center gap-2 bg-white text-neutral-900 px-6 py-3 rounded-full font-medium text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors cursor-pointer">
-          WhatsApp
-        </button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/pongangairaman-nks"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-white text-neutral-900 px-6 py-3 rounded-full font-medium text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors"
+        >
+          LinkedIn
+        </a>
       </div>
     </section>
   );

@@ -8,8 +8,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Kawsar Ahmed — Designer & Developer",
-  description: "Building digital products, brands, and experiences.",
+  title: "PonGangaiRaman NKS — Frontend Engineer",
+  description:
+    "Frontend Engineer with 4 years of experience building scalable, high-performance web applications using React, TypeScript, and Next.js.",
 };
 
 export default function RootLayout({

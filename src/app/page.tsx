@@ -1,6 +1,9 @@
 import HeroSection from "@/components/sections/HeroSection";
-import BrandsSection from "@/components/sections/BrandsSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+import AboutSection from "@/components/sections/AboutSection";
+import SkillsSection from "@/components/sections/SkillsSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
+import PersonalSection from "@/components/sections/PersonalSection";
 import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/sections/Footer";
 
@@ -10,9 +13,15 @@ export default function Home() {
       <div className="max-w-3xl mx-auto flex flex-col">
         <HeroSection />
         <div className="h-3" />
-        <BrandsSection />
-        <div className="h-8" />
-        <ServicesSection />
+        <AboutSection />
+        <div className="h-3" />
+        <SkillsSection />
+        <div className="h-3" />
+        <ExperienceSection />
+        <div className="h-3" />
+        <ProjectsSection />
+        <div className="h-3" />
+        <PersonalSection />
         <div className="h-3" />
         <CTASection />
         <div className="h-4" />
