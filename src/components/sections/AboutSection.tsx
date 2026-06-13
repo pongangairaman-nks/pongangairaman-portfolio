@@ -10,13 +10,13 @@ export default function AboutSection() {
       <div className="max-w-4xl mx-auto w-full">
         <div className="flex items-center gap-4 mb-14">
           <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-4 py-1.5 text-xs text-neutral-600 border border-neutral-400 rounded-full bg-[#e8e8e8]">
+          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
             About
           </div>
           <div className="flex-1 h-px bg-neutral-400" />
         </div>
 
-        <div className="flex gap-4 mb-14">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-14">
           {stats.map((stat) => (
             <div
               key={stat.label}

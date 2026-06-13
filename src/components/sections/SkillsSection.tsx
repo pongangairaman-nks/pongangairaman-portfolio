@@ -105,13 +105,13 @@ export default function SkillsSection() {
 
         <div className="flex items-center gap-4 mb-10">
           <div className="flex-1 h-px bg-neutral-400" />
-          <div className="px-4 py-1.5 text-xs text-neutral-600 border border-neutral-400 rounded-full bg-[#e8e8e8]">
+          <div className="px-5 py-2 text-xs font-medium text-neutral-600 rounded-full bg-card shadow-sm">
             Skills
           </div>
           <div className="flex-1 h-px bg-neutral-400" />
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {skillCategories.map((cat) => (
             <div key={cat.title} className="flex flex-col gap-3 bg-white border border-neutral-200 rounded-2xl p-5">
               <div className="text-neutral-600">{cat.icon}</div>

@@ -1,18 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #e8e8e8;
-  --foreground: #1a1a1a;
+  /* Soft spring-green frame that peeks at the very top of the page */
+  --frame: #c3e69a;
+  /* Warm light-gray page surface (the big rounded card) */
+  --background: #e9e9e6;
+  /* White inner cards (logo strip, service tiles, etc.) */
+  --card: #ffffff;
+  /* Charcoal — softer than pure black, matches the reference headings */
+  --foreground: #2c2c2c;
 }
 
 @theme inline {
+  --color-frame: var(--frame);
   --color-background: var(--background);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-hanken);
+}
+
+html {
+  background: var(--frame);
 }
 
 body {
-  background: var(--background);
+  background: var(--frame);
   color: var(--foreground);
 }
 
