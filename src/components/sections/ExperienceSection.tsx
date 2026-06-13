@@ -100,58 +100,60 @@ const experiences: Experience[] = [
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-white rounded-3xl px-10 py-12">
-      <div className="flex items-center gap-4 mb-8">
-        <div className="flex-1 h-px bg-neutral-200" />
-        <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full">
-          Experience
-        </div>
-        <div className="flex-1 h-px bg-neutral-200" />
-      </div>
-
-      <div className="flex flex-col gap-10">
-        {experiences.map((exp) => (
-          <div key={exp.company} className="relative pl-6 border-l-2 border-neutral-100">
-            <div className="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-neutral-900" />
-
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center gap-3">
-                {/* Company logo placeholder — replace with <img> when you have logos */}
-                <div className="w-8 h-8 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center text-[10px] font-black text-neutral-600 shrink-0">
-                  {exp.initials}
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-neutral-900">{exp.company}</h3>
-                  <p className="text-xs text-neutral-500">
-                    {exp.role}
-                    {exp.location ? ` · ${exp.location}` : ""}
-                  </p>
-                </div>
-              </div>
-              <span className="text-xs text-neutral-400 bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1 whitespace-nowrap ml-4 shrink-0">
-                {exp.period}
-              </span>
-            </div>
-
-            <div className="mt-4 flex flex-col gap-5">
-              {exp.projects.map((proj) => (
-                <div key={proj.name}>
-                  <h4 className="text-xs font-semibold text-neutral-900 uppercase tracking-wider mb-2">
-                    {proj.name}
-                  </h4>
-                  <ul className="flex flex-col gap-1.5">
-                    {proj.bullets.map((b, i) => (
-                      <li key={i} className="text-xs text-neutral-600 leading-relaxed flex gap-2">
-                        <span className="text-neutral-300 mt-0.5 shrink-0">—</span>
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+    <section className="bg-[#f7f7f7] border-b border-neutral-100">
+      <div className="max-w-4xl mx-auto px-8 py-16">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex-1 h-px bg-neutral-200" />
+          <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full bg-white">
+            Experience
           </div>
-        ))}
+          <div className="flex-1 h-px bg-neutral-200" />
+        </div>
+
+        <div className="flex flex-col gap-12">
+          {experiences.map((exp) => (
+            <div key={exp.company} className="relative pl-6 border-l-2 border-neutral-200">
+              <div className="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-neutral-900" />
+
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  {/* Company logo placeholder — replace with <img> when available */}
+                  <div className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-[10px] font-black text-neutral-600 shrink-0">
+                    {exp.initials}
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-neutral-900">{exp.company}</h3>
+                    <p className="text-xs text-neutral-500">
+                      {exp.role}
+                      {exp.location ? ` · ${exp.location}` : ""}
+                    </p>
+                  </div>
+                </div>
+                <span className="text-xs text-neutral-400 bg-white border border-neutral-200 rounded-full px-3 py-1 whitespace-nowrap ml-4 shrink-0">
+                  {exp.period}
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-5">
+                {exp.projects.map((proj) => (
+                  <div key={proj.name}>
+                    <h4 className="text-[11px] font-semibold text-neutral-900 uppercase tracking-wider mb-2">
+                      {proj.name}
+                    </h4>
+                    <ul className="flex flex-col gap-1.5">
+                      {proj.bullets.map((b, i) => (
+                        <li key={i} className="text-xs text-neutral-600 leading-relaxed flex gap-2">
+                          <span className="text-neutral-300 mt-0.5 shrink-0">—</span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

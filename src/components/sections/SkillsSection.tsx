@@ -93,31 +93,33 @@ const skillCategories = [
 
 export default function SkillsSection() {
   return (
-    <section className="bg-white rounded-3xl px-10 py-12">
-      <div className="text-center mb-8">
-        <h2 className="text-[28px] font-bold leading-snug">
-          Tech I build with
-          <br />
-          <span className="text-neutral-400 italic">and technologies I love</span>
-        </h2>
-      </div>
-
-      <div className="flex items-center gap-4 mb-8">
-        <div className="flex-1 h-px bg-neutral-200" />
-        <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full">
-          Skills
+    <section className="bg-white border-b border-neutral-100">
+      <div className="max-w-4xl mx-auto px-8 py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-[28px] font-bold leading-snug">
+            Tech I build with
+            <br />
+            <span className="text-neutral-400 italic">and technologies I love</span>
+          </h2>
         </div>
-        <div className="flex-1 h-px bg-neutral-200" />
-      </div>
 
-      <div className="grid grid-cols-4 gap-5">
-        {skillCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col gap-2 bg-neutral-50 rounded-2xl p-4">
-            <div className="text-neutral-600">{cat.icon}</div>
-            <h3 className="text-xs font-semibold text-neutral-900">{cat.title}</h3>
-            <p className="text-[11px] text-neutral-500 leading-relaxed">{cat.tags}</p>
+        <div className="flex items-center gap-4 mb-8">
+          <div className="flex-1 h-px bg-neutral-200" />
+          <div className="px-4 py-1 text-xs text-neutral-500 border border-neutral-200 rounded-full">
+            Skills
           </div>
-        ))}
+          <div className="flex-1 h-px bg-neutral-200" />
+        </div>
+
+        <div className="grid grid-cols-4 gap-4">
+          {skillCategories.map((cat) => (
+            <div key={cat.title} className="flex flex-col gap-2 bg-[#f7f7f7] border border-neutral-200 rounded-2xl p-4">
+              <div className="text-neutral-600">{cat.icon}</div>
+              <h3 className="text-xs font-semibold text-neutral-900">{cat.title}</h3>
+              <p className="text-[11px] text-neutral-500 leading-relaxed">{cat.tags}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -4,8 +4,9 @@ const EMAIL = "pongangairamannks@gmail.com";
 
 export default function HeroSection() {
   return (
-    <section className="bg-white rounded-3xl overflow-hidden">
-      <nav className="flex items-center justify-between px-8 pt-5 pb-4">
+    <section className="bg-white border-b border-neutral-100">
+      {/* Full-width nav */}
+      <nav className="max-w-4xl mx-auto flex items-center justify-between px-8 pt-6 pb-4">
         <div className="flex items-center gap-3">
           <span className="text-sm text-neutral-500">{EMAIL}</span>
           <CopyButton text={EMAIL} />
@@ -37,11 +38,12 @@ export default function HeroSection() {
         </div>
       </nav>
 
-      <div className="flex flex-col items-center text-center px-8 pt-10 pb-20">
+      {/* Hero content */}
+      <div className="max-w-4xl mx-auto px-8 pt-16 pb-24 flex flex-col items-center text-center">
         {/* Profile photo placeholder */}
         <div className="flex items-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-neutral-100 border-2 border-neutral-200 overflow-hidden flex-shrink-0 flex items-end justify-center">
-            {/* Replace this SVG with <img src="/photo.jpg" ... /> when you have a photo */}
+          <div className="w-16 h-16 rounded-full bg-neutral-100 border-2 border-neutral-200 overflow-hidden shrink-0 flex items-end justify-center">
+            {/* Replace with <img src="/photo.jpg" className="w-full h-full object-cover" /> */}
             <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
               <circle cx="23" cy="17" r="10" fill="#d4d4d4" />
               <path d="M3 46 Q3 31 23 31 Q43 31 43 46" fill="#d4d4d4" />
@@ -52,7 +54,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Name: PGR initials stay black, connecting letters are italic gray — same design language as template accents */}
+        {/* PGR initials stay black, connecting letters italic gray */}
         <h1 className="text-5xl font-black leading-[1.15] tracking-tight mb-4">
           <span className="text-neutral-900">P</span>
           <span className="text-neutral-400 italic">on</span>

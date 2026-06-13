@@ -9,24 +9,15 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#e3e3e3] py-8 px-6">
-      <div className="max-w-3xl mx-auto flex flex-col">
-        <HeroSection />
-        <div className="h-3" />
-        <AboutSection />
-        <div className="h-3" />
-        <SkillsSection />
-        <div className="h-3" />
-        <ExperienceSection />
-        <div className="h-3" />
-        <ProjectsSection />
-        <div className="h-3" />
-        <PersonalSection />
-        <div className="h-3" />
-        <CTASection />
-        <div className="h-4" />
-        <Footer />
-      </div>
-    </div>
+    <main className="min-h-screen bg-white">
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <PersonalSection />
+      <CTASection />
+      <Footer />
+    </main>
   );
 }
