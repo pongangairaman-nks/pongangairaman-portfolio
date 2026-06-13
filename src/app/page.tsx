@@ -5,7 +5,9 @@ import AboutSection from "@/components/sections/AboutSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import PersonalSection from "@/components/sections/PersonalSection";
+import QuoteSection from "@/components/sections/QuoteSection";
+import BeyondTheCodeSection from "@/components/sections/BeyondTheCodeSection";
+import FunFactsSection from "@/components/sections/FunFactsSection";
 import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/sections/Footer";
 import Panel from "@/components/ui/Panel";
@@ -42,8 +44,16 @@ export default function Home() {
         <ProjectsSection />
       </Panel>
 
-      <Panel surface="white" z={20}>
-        <PersonalSection />
+      <Panel surface="white" z={25}>
+        <QuoteSection />
+      </Panel>
+
+      <Panel surface="gray" z={20}>
+        <BeyondTheCodeSection />
+      </Panel>
+
+      <Panel surface="white" z={15}>
+        <FunFactsSection />
       </Panel>
 
       <Panel surface="gray" z={10} last>

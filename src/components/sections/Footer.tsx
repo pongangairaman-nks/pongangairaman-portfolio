@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-300">
       <div className="max-w-4xl mx-auto px-12 py-8 flex items-center justify-between">
-        <span className="text-sm text-neutral-500">© 2025 PonGangaiRaman NKS</span>
+        <span className="text-sm text-neutral-500">© {new Date().getFullYear()} PonGangaiRaman NKS</span>
         <div className="flex items-center text-sm text-neutral-500">
           <a
             href="https://www.linkedin.com/in/pongangairaman-nks"
