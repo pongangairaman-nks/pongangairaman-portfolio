@@ -141,11 +141,11 @@ export default function ExperienceSection() {
               data-reveal
               className="relative pl-7 border-l-2 border-neutral-300"
             >
-              <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-[var(--surface)]" />
+              <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-neutral-900 border-2 border-(--surface)" />
 
               <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[var(--card-surface)] border border-black/5 flex items-center justify-center text-xs font-black text-neutral-600 shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-(--card-surface) border border-black/5 flex items-center justify-center text-xs font-black text-neutral-600 shrink-0">
                     {exp.initials}
                   </div>
                   <div>
@@ -156,7 +156,7 @@ export default function ExperienceSection() {
                     </p>
                   </div>
                 </div>
-                <span className="text-xs text-neutral-500 bg-[var(--card-surface)] border border-black/5 rounded-full px-4 py-1.5 whitespace-nowrap ml-4 shrink-0">
+                <span className="text-xs text-neutral-500 bg-(--card-surface) border border-black/5 rounded-full px-4 py-1.5 whitespace-nowrap ml-4 shrink-0">
                   {exp.period}
                 </span>
               </div>

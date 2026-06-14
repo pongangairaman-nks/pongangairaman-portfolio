@@ -77,7 +77,7 @@ export default function ProjectsSection() {
               key={project.name}
               data-reveal
               style={{ "--reveal-delay": `${(i % 2) * 90}ms` } as React.CSSProperties}
-              className="flex flex-col rounded-2xl border border-black/5 bg-[var(--card-surface)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="flex flex-col rounded-2xl border border-black/5 bg-(--card-surface) p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <ProjectPlaceholder name={project.name} />
 

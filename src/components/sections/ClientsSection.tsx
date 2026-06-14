@@ -98,7 +98,7 @@ export default function ClientsSection() {
   return (
     <div className="pt-28 pb-20 md:pt-32 md:pb-24">
       <div
-        className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
+        className="overflow-hidden [linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
         data-reveal
       >
         <div className="flex w-max items-center gap-x-14 pl-14 animate-marquee hover:[animation-play-state:paused] md:gap-x-20 md:pl-20">

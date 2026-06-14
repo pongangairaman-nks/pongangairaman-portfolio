@@ -30,7 +30,7 @@ export default function AboutSection() {
               key={stat.label}
               data-reveal
               style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
-              className="rounded-2xl border border-black/5 bg-[var(--card-surface)] px-4 py-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-black/5 bg-(--card-surface) px-4 py-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="text-3xl font-black text-neutral-900 md:text-4xl">
                 {stat.value}

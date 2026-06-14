@@ -113,7 +113,7 @@ export default function SkillsSection() {
               key={cat.title}
               data-reveal
               style={{ "--reveal-delay": `${(i % 4) * 80}ms` } as React.CSSProperties}
-              className="flex flex-col gap-3 rounded-2xl border border-black/5 bg-[var(--card-surface)] p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="flex flex-col gap-3 rounded-2xl border border-black/5 bg-(--card-surface) p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="text-neutral-600">{cat.icon}</div>
               <h3 className="text-sm font-semibold text-neutral-900">{cat.title}</h3>

@@ -1,6 +1,6 @@
 function HandshakeIcon() {
   return (
-    <div className="w-20 h-20 rounded-full bg-[var(--card-surface)] border border-black/5 flex items-center justify-center mb-8" data-reveal>
+    <div className="w-20 h-20 rounded-full bg-(--card-surface) border border-black/5 flex items-center justify-center mb-8" data-reveal>
       <svg
         width="40"
         height="40"
