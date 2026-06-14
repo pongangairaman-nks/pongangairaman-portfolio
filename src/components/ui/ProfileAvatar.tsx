@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 /**
  * Circular black-and-white avatar that mirrors the reference design.
- * Shows a neutral silhouette by default and probes /photo.jpg on mount —
+ * Shows a neutral silhouette by default and probes /photo.png on mount —
  * the real photo is shown only if it actually loads (forced to grayscale).
- * Drop a file at public/photo.jpg to swap it in; no code change required.
+ * Drop a file at public/photo.png to swap it in; no code change required.
  */
 export default function ProfileAvatar({
   alt = "Profile photo",
@@ -19,9 +19,9 @@ export default function ProfileAvatar({
 
   useEffect(() => {
     const img = new window.Image();
-    img.onload = () => setSrc("/photo.jpg");
+    img.onload = () => setSrc("/photo.png");
     img.onerror = () => setSrc(null);
-    img.src = "/photo.jpg";
+    img.src = "/photo.png";
   }, []);
 
   return (

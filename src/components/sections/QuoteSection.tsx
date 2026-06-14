@@ -12,7 +12,7 @@ export default function QuoteSection() {
           <p className="mx-auto max-w-2xl text-lg font-medium italic leading-loose text-white md:text-xl">
             We came from the stars, and to stardust we shall return. Between those
             two infinities lies our chance to dance, love, and leave a little
-            light behind!!
+            light behind!
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <div className="h-px w-10 bg-neutral-700" />

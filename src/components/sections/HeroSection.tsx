@@ -15,6 +15,7 @@ export default function HeroSection() {
           <CopyButton text={EMAIL} />
           <a
             href="/cv.pdf"
+            download="PonGangaiRaman_FrontEnd_Engineer_Resume.pdf"
             className="rounded-full bg-[var(--card-surface)] px-6 py-2.5 text-sm font-medium text-neutral-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 active:scale-95"
           >
             CV
