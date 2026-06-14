@@ -26,7 +26,7 @@ export default function ProfileAvatar({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-full bg-neutral-300 shadow-sm ring-1 ring-black/5 ${className}`}
+      className={`relative overflow-hidden rounded-full border-4 border-white bg-neutral-300 shadow-sm ${className}`}
     >
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element

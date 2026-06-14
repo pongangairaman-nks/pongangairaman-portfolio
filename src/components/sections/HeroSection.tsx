@@ -51,7 +51,7 @@ export default function HeroSection() {
         >
           <ProfileAvatar
             alt="PonGangaiRaman NKS"
-            className="h-28 w-28 md:h-32 md:w-32"
+            className="h-32 w-32 md:h-40 md:w-40"
           />
           {/* Positioning wrapper keeps the float animation from fighting the centering transform */}
           <div className="sm:absolute sm:top-1/2 sm:left-[70%] sm:-translate-y-1/2">
