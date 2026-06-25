@@ -60,7 +60,7 @@ function ProjectPlaceholder({ name }: { name: string }) {
       <div className="w-10 h-10 rounded-lg bg-neutral-200 border border-neutral-300 flex items-center justify-center text-sm font-black text-neutral-500">
         {initials}
       </div>
-      <span className="text-xs text-neutral-400">Project preview</span>
+      {/* <span className="text-xs text-neutral-400">Project preview</span> */}
     </div>
   );
 }
